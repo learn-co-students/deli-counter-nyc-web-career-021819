@@ -15,10 +15,12 @@ def line(katz_deli)
 
 def take_a_number(katz_deli, name)
   katz_deli << name
-  katz_deli.each.with_index do |name, i|
-    puts "Welcome, #{name}. You are number #{i+1} in line."
-  end
+  num = katz_deli.length
+  
+    puts "Welcome, #{name}. You are number #{num} in line."
+
 end
+
 
 def now_serving(katz_deli)
   if katz_deli.size == 0
@@ -26,6 +28,6 @@ def now_serving(katz_deli)
   else
     head = katz_deli.shift
     katz_deli
-    puts "Currently serving #{head}"
+    puts "Currently serving #{head}."
   end
 end
